@@ -1,0 +1,14 @@
+/* pages/shop/shop.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+/* .swiper-wrap{
+  height : 320rpx;
+  background-color: red;
+} */
+
+.main{
+  flex : 1;
+  background-color: yellow;
+}

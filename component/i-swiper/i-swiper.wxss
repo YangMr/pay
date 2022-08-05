@@ -1,0 +1,14 @@
+/* component/i-swiper/i-swiper.wxss */
+.swiper-wrap{
+  height : 320rpx;
+  background-color: red;
+}
+
+.swiper-wrap swiper{
+  height : 100%;
+  width: 100%;
+}
+.swiper-wrap swiper image{
+  width: 100%;
+  height: 100%;
+}

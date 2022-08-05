@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="swiper-wrap">
+    <i-swiper data="{{bannerData}}"></i-swiper>
+  </view>
+  
+  <view class="main">
+    main
+  </view>
+</view>

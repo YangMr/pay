@@ -5,26 +5,35 @@ import exceptionMessage from "../config/exceptionMessage"
 
 
 class Http {
+  static async request({url, method = 'GET', data = {}, name = 'api1'}, options) {
+    wx.showLoading()
+    try {
+      const response = await wxToPromise('request',{
+        url : APIConfig[name].baseURL + url,
+        method,
+        data,
+        ...options
+      })
 
-  static async request({url, method = 'GET', data = {}}, options) {
-    const response = await wxToPromise('request',{
-      url : APIConfig.baseURL + url,
-      method,
-      data,
-      ...options
-    })
-
-    if(response.statusCode < 400){
-      return response.data
-    }
-
-    if(response.statusCode === 401){
-      // token过期, 登录超时
-      return 
+      wx.hideLoading()
+  
+      if(response.statusCode < 400){
+        return response.data
+      }
+  
+      if(response.statusCode === 401){
+        // token过期, 登录超时
+        return 
+      }
+      
+      Http._showError(response.data.code, response.data.msg)
+      return response
+    } catch (error) {
+      wx.hideLoading()
+      _showError(-1)
+      console.log(error)
     }
     
-    Http._showError(response.data.code, response.data.msg)
-    return response
   }
 
   static _showError(code, msg){
@@ -36,7 +45,6 @@ class Http {
       duration : 3000
     })
   }
-  
 }
 
 
