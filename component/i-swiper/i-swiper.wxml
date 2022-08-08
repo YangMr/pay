@@ -1,6 +1,6 @@
 <view class="swiper-wrap">
   <swiper indicator-dots circular interval="3000" autoplay>
-    <swiper-item wx:for="{{data}}">
+    <swiper-item wx:for="{{data}}" wx:key="index">
       <image src="{{item.banner_img}}"></image>
     </swiper-item>
   </swiper>

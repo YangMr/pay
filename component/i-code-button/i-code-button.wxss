@@ -1,0 +1,29 @@
+/* component/i-code-button/i-code-button.wxss */
+
+.main{
+  flex : 1;
+  display: flex;
+  justify-content: center;
+}
+.main .qrcode-button{
+  width: 320rpx;
+  height : 320rpx;
+  background-color: #FEBE1B;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+  border: 25rpx solid #FFE49B;
+}
+.main .qrcode-button image{
+  width: 180rpx;
+  height: 160rpx;
+}
+.main .qrcode-button text{
+  color : #fff;
+  margin-top: 5px;
+  width: 180rpx;
+  text-align: center;
+}

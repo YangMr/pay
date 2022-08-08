@@ -1,1 +1,44 @@
 /* pages/cart/cart.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.list{
+  padding-bottom : 181rpx;
+}
+.settle-ment{
+  background-color: yellow;
+  position: fixed;
+  bottom : 0; 
+  left : 0; 
+  right : 0;
+}
+.total-price{
+  height : 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  border: 1rpx solid #eee;
+  padding : 0 20rpx;
+  color : #ccc;
+}
+.total-price .price{
+  margin-left: 10rpx;
+  color : #f60;
+}
+.button-group{
+  height : 100rpx;
+  display: flex;
+}
+.button-group  view{
+  flex : 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color : #fff;
+}
+.add{
+  background-color:  #FEBE1B;
+}
+.settle{
+  background-color: #f60;
+}
