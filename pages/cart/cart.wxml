@@ -1,13 +1,24 @@
 <view class="container">
-  <view class="list" >1</view>
+  <view class="list">
+    <view class="list-item" wx:for="{{cartList}}" wx:key="index">
+      <view class="list-item-title">{{item.title}}</view>
+      <view class="list-item-sku">规格: 500ml/瓶</view>
+      <view class="list-item-price">¥{{item.price}}</view>
+      <view class="list-item-button-group">
+        <view class="decrement" data-index="{{index}}" bindtap="handleDecrement">-</view>
+        <input type="text" class="count" value="{{item.num}}"/>
+        <view class="increment" data-index="{{index}}"  bindtap="handleIncrement">+</view>
+      </view>
+    </view>
+  </view>
   <view class="settle-ment">
     <view class="total-price">
       <text>总计:</text>
-      <text class="price">¥3.50</text>
+      <text class="price">¥{{totalPrice}}</text>
     </view>
     <view class="button-group">
-      <view class="add">继续添加</view>
-      <view class="settle">去结算(1)</view>
+      <view class="add" bindtap="handleAdd">继续添加</view>
+      <view class="settle">去结算({{cartList.length}})</view>
     </view>
   </view>
 </view>
