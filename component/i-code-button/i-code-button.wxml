@@ -1,6 +1,7 @@
 <view class="main">
   <view class="qrcode-button" bindtap="handleScanCode">
-    <image src="/assets/images/qrcode.png"></image>
-    <text>请扫描商品条形码</text>
+    <image src="{{status ? '/assets/images/cart_index.png' : '/assets/images/qrcode.png'}}"></image>
+    <text>{{status ? '去结算' : '请扫描商品条形码'}}</text>
+    <view class='circle' wx:if="{{status}}">{{count}}</view>
   </view>
 </view>

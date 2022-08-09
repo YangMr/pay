@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container" wx:if="{{cartList.length > 0}}">
   <view class="list">
     <view class="list-item" wx:for="{{cartList}}" wx:key="index">
       <view class="list-item-title">{{item.title}}</view>
@@ -21,4 +21,12 @@
       <view class="settle">去结算({{cartList.length}})</view>
     </view>
   </view>
+</view>
+
+<view class="container empty-cart" wx:else="">
+ <text class="tips">购物车是空的哦~</text>
+ <image class="cart-image" src="../../assets/images/cart.png"></image>
+ <view class="sancode" bindtap="handleAdd">
+  扫一扫条形码
+ </view>
 </view>
