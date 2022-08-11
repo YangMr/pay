@@ -1,1 +1,85 @@
 /* pages/order/order.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  padding-bottom:102rpx;
+  flex : 1;
+}
+.list{
+  background-color: #fff;
+  padding : 20rpx;
+}
+.list-item{
+  padding-bottom: 20rpx;
+  border-bottom:2rpx solid #ccc;
+}
+.list-item .title{
+  display: flex;
+  justify-content: space-between;
+  color : #333;
+}
+.list-item .title text:first-child{
+  flex : 2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list-item .title text:last-child{
+  color : #f60;
+  flex : 1;
+  text-align: right;
+}
+.list-item .count{
+  text-align: right;
+  margin-top: 20rpx;
+  color : #333;
+}
+.list-item .count text{
+  font-size: 28rpx;
+}
+
+.list-button{
+  color : #333;
+  padding : 20rpx 0;
+  text-align: center;
+}
+.item{
+  margin-top:20rpx;
+  background-color: #fff;
+  height : 120rpx;
+  padding : 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color :  #333;
+}
+.footer{
+  border-top:2rpx solid #ccc;
+  height : 100rpx;
+  position: absolute;
+  bottom: 0;
+  left : 0;
+  right : 0;
+  display: flex;
+  background-color: #fff;
+}
+.footer .price-pay{
+  flex : 2;
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+  color : #bbb;
+}
+.footer .price-pay .price{
+  color : #f60;
+}
+.footer .confirm-pay{
+  flex : 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color : #fff;
+  background-color:  #FEBE1B;
+}

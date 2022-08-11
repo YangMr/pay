@@ -2,7 +2,13 @@
 import Storage from "../../utils/storage"
 import ShopModel from "../../model/shop"
 import {addCart} from "../../common/cart"
+import {navigateTo} from "../../utils/navigate"
 Page({
+
+  // 跳转到订单页面
+  handleGoOrder(){
+    navigateTo("/pages/order/order")
+  },
 
   /**
    * 商品数量增加方法 
