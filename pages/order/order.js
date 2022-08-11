@@ -1,5 +1,6 @@
 // pages/order/order.js
 import Storage from "../../utils/storage"
+import {navigateTo} from "../../utils/navigate"
 Page({
 
   /**
@@ -10,7 +11,9 @@ Page({
     initCarts : [],
     resultCarts : [],
     len : 0 ,
-    totalPrice : 0
+    totalPrice : 0,
+    balance : 4,
+    flag : false
   },
 
   /**
@@ -62,6 +65,20 @@ Page({
     this.setData({
       totalPrice
     })
+  },
+
+  // 开启余额减扣
+  handleSwitch(event){
+    console.log(event)
+    const value = event.detail.value
+    this.setData({
+      flag : value
+    })
+  },
+
+  //确认支付按钮方法
+  handleGoSuccess(){
+    navigateTo("/pages/success/success")
   },
 
   /**

@@ -15,8 +15,8 @@
       </view>
     </view>
     <view class="item">
-      <text>余额</text>
-      <switch color="#FEBE1B"></switch>
+      <text>余额 <text class="price">(¥{{balance}})</text></text>
+      <switch bindchange="handleSwitch" color="#FEBE1B"></switch>
     </view>
     <view class="item">
       <text>商品金额</text>
@@ -24,13 +24,13 @@
     </view>
     <view class="item">
       <text>余额减扣</text>
-      <text class="price">-¥4</text>
+      <text class="price">-¥{{flag ? balance : 0}}</text>
     </view>
   </view>
   <view class="footer">
     <view class="price-pay">
-      实际支付: <text class="price"> ¥11.5</text>
+      实际支付: <text class="price"> ¥{{flag ? totalPrice - balance : totalPrice}}</text>
     </view>
-    <view class="confirm-pay">确认支付</view>
+    <view class="confirm-pay" bindtap="handleGoSuccess">确认支付</view>
   </view> 
 </view>
