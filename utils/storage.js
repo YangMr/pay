@@ -22,7 +22,7 @@ class Storage {
    * @param {*} key 
    */
   static remove(key){
-    wx.removeStorageSync()
+    wx.removeStorageSync(key)
   }
 
   /**
